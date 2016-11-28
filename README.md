@@ -14,4 +14,3 @@ To run the tests:
 - Clone this repo by typing in Terminal: git clone https://github.com/tadasmajeris/database_server.git
 - change to the directory: cd database_server
 - run RSpec by typing in a command: rspec
----
