@@ -11,7 +11,7 @@ My approach to solve it:
 
 ----
 To run the tests:
-1) Clone this repo by typing in Terminal: git clone https://github.com/tadasmajeris/database_server.git
-2) change to the directory: cd database_server
-2) run RSpec by typing in a command: rspec
+- Clone this repo by typing in Terminal: git clone https://github.com/tadasmajeris/database_server.git
+- change to the directory: cd database_server
+- run RSpec by typing in a command: rspec
 ---
