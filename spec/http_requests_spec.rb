@@ -33,4 +33,9 @@ describe 'HTTP requests' do
     get 'http://localhost:4000/get?key=new'
     expect(last_response.body).to eq 'thing'
   end
+
+  it "can knows if the key doesnt exist" do
+    get 'http://localhost:4000/get?key=sherlock'
+    expect(last_response.body).to be_empty
+  end
 end
