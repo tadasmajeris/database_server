@@ -14,9 +14,16 @@ describe 'HTTP requests' do
   end
 
   it "can send requests with params and get them saved to memory" do
-    post '/set?somekey=somevalue'
+    post 'http://localhost:4000/set?somekey=somevalue'
     expect(last_response).to be_ok
-    get '/get?key=somekey'
+    get 'http://localhost:4000/get?key=somekey'
     expect(last_response.body).to eq 'somevalue'
+  end
+
+  it "can send and get various keys and values" do
+    post 'http://localhost:4000/set?anotherkey=anothervalue'
+    expect(last_response).to be_ok
+    get 'http://localhost:4000/get?key=anotherkey'
+    expect(last_response.body).to eq 'anothervalue'
   end
 end

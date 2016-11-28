@@ -2,17 +2,18 @@ require 'sinatra/base'
 
 class DatabaseServer < Sinatra::Base
   set :port, 4000
+  enable :sessions
 
   get '/' do
     'Home'
   end
 
   post '/set' do
-    p params
+    session.merge!(params)
   end
 
   get '/get' do
-    'somevalue'
+    session[params[:key]]
   end
 
   # start the server if ruby file executed directly
