@@ -26,4 +26,11 @@ describe 'HTTP requests' do
     get 'http://localhost:4000/get?key=anotherkey'
     expect(last_response.body).to eq 'anothervalue'
   end
+
+  it "can send and get various keys and values (variation 2)" do
+    post 'http://localhost:4000/set?new=thing'
+    expect(last_response).to be_ok
+    get 'http://localhost:4000/get?key=new'
+    expect(last_response.body).to eq 'thing'
+  end
 end
