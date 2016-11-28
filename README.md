@@ -10,7 +10,8 @@ My approach to solve it:
 - Tests are written using RSpec (for assertions) and Rack/Test (for sending/getting requests)
 
 ----
-To run the tests:
-- Clone this repo by typing in Terminal: git clone https://github.com/tadasmajeris/database_server.git
-- change to the directory: cd database_server
-- run RSpec by typing in a command: rspec
+Instructions to run the tests:
+- Clone this repo by typing in Terminal: ```git clone https://github.com/tadasmajeris/database_server.git```
+- change to the directory: ```cd database_server```
+- to bundle the gems, type: ```bundle```
+- run RSpec by typing in a command: ```rspec```
